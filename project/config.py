@@ -9,7 +9,7 @@ class BaseConfig:
     DATABASE_URL: str = os.environ.get("DATABASE_URL", f"sqlite:///{BASE_DIR}/db.sqlite3")
     DATABASE_CONNECT_DICT: dict = {}
 
-    CELERY_broker_url: str = os.environ.get("CELERY_BROKER_URL", "redis://127.0.0.1:6379/0")
+    broker_url: str = os.environ.get("CELERY_BROKER_URL", "redis://127.0.0.1:6379/0")
     result_backend: str = os.environ.get("result_backend", "redis://127.0.0.1:6379/0")
 
 
